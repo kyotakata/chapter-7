@@ -1,6 +1,6 @@
 import {Link} from "react-router-dom";
 import { useState, useEffect } from "react";
-import type { PostType } from "../types/post";
+import type { Post } from "../types/post";
 
 const homeContainerStyle: React.CSSProperties = {
   margin: "40px auto",
@@ -72,7 +72,7 @@ const homePostBodyStyle: React.CSSProperties = {
 
 
 export const Home = () => {
-  const [posts, setPosts] = useState<PostType[]>([]); 
+  const [posts, setPosts] = useState<Post[]>([]); 
   const [loading, setLoading] = useState<boolean>(true); 
   useEffect(() => {
     const fetcher = async () => {

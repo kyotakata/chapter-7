@@ -1,6 +1,6 @@
 import { useParams } from "react-router-dom";
 import { useState, useEffect } from "react";
-import type { PostType } from "../types/post";
+import type { Post } from "../types/post";
 
 const detailContainerStyle: React.CSSProperties = {
   margin: "40px auto",
@@ -62,7 +62,7 @@ const detailPostBodyStyle: React.CSSProperties = {
 }
 
 export const Detail = () => {
-  const [post, setPost] = useState<PostType>(); 
+  const [post, setPost] = useState<Post>(); 
   const [loading, setLoading] = useState<boolean>(true); 
   const { id } = useParams();
   useEffect(() => {
